@@ -1,6 +1,3 @@
-/**
- * Created by yan on 16-1-20.
- */
 import React from 'react';
 import { render } from 'react-dom';
 import ReactClipboard from '../../lib/react-clipboard';

@@ -1,6 +1,3 @@
-/**
- * Created by yan on 16-1-20.
- */
 import React, { Component, PropTypes } from 'react';
 import Clipboard from 'clipboard';
 
