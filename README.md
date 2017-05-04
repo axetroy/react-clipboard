@@ -48,3 +48,8 @@ class App extends Component {
 - onError: function
 
     error callback
+
+
+### License
+
+The [MIT License](https://github.com/axetroy/react-clipboard/blob/master/LICENSE)

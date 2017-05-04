@@ -1,7 +1,7 @@
 /**
  * Created by yan on 16-1-20.
  */
-import { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Clipboard from 'clipboard';
 
 class ReactClipboard extends Component {
@@ -17,7 +17,12 @@ class ReactClipboard extends Component {
 
   render() {
     return (
-      <span
+      <div
+        className={
+          'react-clipboard-wrapper' +
+            (this.props.className ? ' ' + this.props.className : '')
+        }
+        style={{ display: 'inline-block', ...this.props.style }}
         ref={dom => {
           if (dom && !this.__Clipboard) {
             let clipboard = (this.__Clipboard = new Clipboard(dom, {
@@ -39,7 +44,7 @@ class ReactClipboard extends Component {
         }}
       >
         {this.props.children}
-      </span>
+      </div>
     );
   }
 }
