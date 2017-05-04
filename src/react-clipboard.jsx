@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Clipboard from 'clipboard';
 
-class ReactClipboard extends Component {
+export default class ReactClipboard extends Component {
   PropTypes = {
     value: PropTypes.string,
     onSuccess: PropTypes.func,
@@ -45,5 +45,3 @@ class ReactClipboard extends Component {
     );
   }
 }
-
-export default ReactClipboard;

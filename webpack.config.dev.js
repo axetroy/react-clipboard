@@ -1,7 +1,10 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: path.join(__dirname, 'example', 'src', 'index.jsx'),
+  output: {
+    filename: 'bundle.js'
+  },
   module: {
     loaders: [
       {
