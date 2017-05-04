@@ -10,7 +10,8 @@
   },
   "keywords": [
     "react",
-    "react-component"
+    "react-component",
+    "clipboard"
   ],
   "author": "axetroy",
   "license": "MIT",
