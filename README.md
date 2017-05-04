@@ -5,7 +5,9 @@
 ## Install
 
 ```bash
-npm install @axetroy/react-clipboard
+yarn add react          # requirement
+yarn add clipboard      # requirement
+yarn add @axetroy/react-clipboard
 ```
 
 ## Usage
