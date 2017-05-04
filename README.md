@@ -50,7 +50,14 @@ class App extends Component {
 - onError: function
 
     error callback
+    
+## Run the Demo
 
+```bash
+git clone https://github.com/axetroy/react-clipboard.git
+yarn
+yarn start
+```
 
 ### License
 
