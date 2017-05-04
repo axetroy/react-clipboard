@@ -1,5 +1,7 @@
 # react-clipboard
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/react-clipboard.svg)](https://greenkeeper.io/)
+
 [clipboard](https://github.com/zenorocha/clipboard.js) wrapper component for react
 
 ## Install
