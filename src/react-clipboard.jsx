@@ -8,6 +8,28 @@ export default class ReactClipboard extends Component {
     onError: PropTypes.func
   };
 
+  componentDidMount() {
+    if (this.refs.container) {
+      let clipboard = new Clipboard(this.refs.container, {
+        text: () => this.props.value
+      });
+
+      clipboard.on('success', event => {
+        if (typeof this.props.onSuccess === 'function') {
+          this.props.onSuccess(event);
+        }
+      });
+
+      clipboard.on('error', event => {
+        if (typeof this.props.onError === 'function') {
+          this.props.onError(event);
+        }
+      });
+
+      this.__Clipboard = clipboard;
+    }
+  }
+
   componentWillUnmount() {
     this.__Clipboard && this.__Clipboard.destroy();
   }
@@ -20,25 +42,7 @@ export default class ReactClipboard extends Component {
             (this.props.className ? ' ' + this.props.className : '')
         }
         style={{ display: 'inline-block', ...this.props.style }}
-        ref={dom => {
-          if (dom && !this.__Clipboard) {
-            let clipboard = (this.__Clipboard = new Clipboard(dom, {
-              text: () => this.props.value
-            }));
-
-            clipboard.on('success', event => {
-              if (typeof this.props.onSuccess === 'function') {
-                this.props.onSuccess(event);
-              }
-            });
-
-            clipboard.on('error', event => {
-              if (typeof this.props.onError === 'function') {
-                this.props.onError(event);
-              }
-            });
-          }
-        }}
+        ref="container"
       >
         {this.props.children}
       </div>
