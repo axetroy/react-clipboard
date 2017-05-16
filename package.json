@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.dev.js",
     "dev": "rimraf lib && webpack --config webpack.config.prod.js --display-error-details --progress --colors --watch",
-    "build": "rimraf lib && webpack --config webpack.config.prod.js --display-error-details --progress --colors"
+    "build": "rimraf lib && webpack --config webpack.config.prod.js --display-error-details --progress --colors",
+    "build:doc": "npm run build && rimraf docs && webpack --config webpack.config.doc.js --display-error-details --progress --colors",
+    "deploy": "gh-pages -d ./docs"
   },
   "keywords": [
     "react",
@@ -15,7 +17,9 @@
   ],
   "author": "axetroy",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "gh-pages": "^1.0.0"
+  },
   "peerDependencies": {
     "clipboard": "^1.6.1",
     "react": "^15.4.2"
@@ -27,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "clipboard": "^1.6.1",
+    "copy-webpack-plugin": "^4.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "rimraf": "^2.5.0",
