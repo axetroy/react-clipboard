@@ -2,6 +2,8 @@
 
 [clipboard](https://github.com/zenorocha/clipboard.js) wrapper component for react
 
+[Online demo](https://axetroy.github.io/react-clipboard/)
+
 ## Install
 
 ```bash
