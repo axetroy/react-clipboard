@@ -1,11 +1,24 @@
-/**
- * Created by yan on 16-1-20.
- */
 import React from 'react';
-import ReactClipboard from '../../lib/react-clipboard';
-import 'style!css!../../style.css';
 import { render } from 'react-dom';
+import ReactClipboard from '../../lib/react-clipboard';
 
-var element = document.createElement('div');
+const element = document.createElement('div');
 document.body.appendChild(element);
-render(<ReactClipboard />, element);
+render(
+  <div>
+    hello world
+    <ReactClipboard
+      style={{ display: 'block' }}
+      value={'you will copy me!'}
+      onSuccess={() => {
+        alert('copy success');
+      }}
+      onError={() => {
+        alert('copy error');
+      }}
+    >
+      <input type="button" value="Click me & copy that." />
+    </ReactClipboard>
+  </div>,
+  element
+);

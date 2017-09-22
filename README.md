@@ -4,10 +4,14 @@
 
 [clipboard](https://github.com/zenorocha/clipboard.js) wrapper component for react
 
+[Online demo](https://axetroy.github.io/react-clipboard/)
+
 ## Install
 
 ```bash
-npm install @axetroy/react-clipboard
+yarn add react          # requirement
+yarn add clipboard      # requirement
+yarn add @axetroy/react-clipboard
 ```
 
 ## Usage
@@ -50,3 +54,15 @@ class App extends Component {
 - onError: function
 
     error callback
+    
+## Run the Demo
+
+```bash
+git clone https://github.com/axetroy/react-clipboard.git
+yarn
+yarn start
+```
+
+### License
+
+The [MIT License](https://github.com/axetroy/react-clipboard/blob/master/LICENSE)
