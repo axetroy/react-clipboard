@@ -9,7 +9,8 @@ module.exports = {
   },
   externals: {
     react: 'react',
-    clipboard: 'clipboard'
+    clipboard: 'clipboard',
+    proptypes: 'proptypes'
   },
   module: {
     loaders: [

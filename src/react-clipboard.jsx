@@ -1,5 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'proptypes';
 import Clipboard from 'clipboard';
+
+console.log(PropTypes);
 
 export default class ReactClipboard extends Component {
   PropTypes = {
@@ -39,7 +42,7 @@ export default class ReactClipboard extends Component {
       <div
         className={
           'react-clipboard-wrapper' +
-            (this.props.className ? ' ' + this.props.className : '')
+          (this.props.className ? ' ' + this.props.className : '')
         }
         style={{ display: 'inline-block', ...this.props.style }}
         ref="container"
