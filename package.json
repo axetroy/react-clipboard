@@ -1,6 +1,6 @@
 {
   "name": "@axetroy/react-clipboard",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "clipboard wrapper component for react",
   "main": "index.js",
   "scripts": {
