@@ -1,7 +1,5 @@
 # react-clipboard
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/react-clipboard.svg)](https://greenkeeper.io/)
-
 [clipboard](https://github.com/zenorocha/clipboard.js) wrapper component for react
 
 [Online demo](https://axetroy.github.io/react-clipboard/)
@@ -17,20 +15,20 @@ yarn add @axetroy/react-clipboard
 ## Usage
 
 ```javascript
-import { Component } from 'react';
-import ReactClipboard from '@axetroy/react-clipboard';
+import { Component } from "react";
+import ReactClipboard from "@axetroy/react-clipboard";
 
 class App extends Component {
   render() {
     return (
       <div>
         <ReactClipboard
-          value={'you will copy me!'}
+          value={"you will copy me!"}
           onSuccess={() => {
-            console.log('copy success');
+            console.log("copy success");
           }}
           onError={() => {
-            console.error('copy error');
+            console.error("copy error");
           }}
         >
           <input type="button" value="Click me & copy that." />
@@ -43,18 +41,18 @@ class App extends Component {
 
 ## Props
 
-- value: string
+* value: string
 
-    any string you want to copy
+  any string you want to copy
 
-- onSuccess: function
+* onSuccess: function
 
-    success callback
+  success callback
 
-- onError: function
+* onError: function
 
-    error callback
-    
+  error callback
+
 ## Run the Demo
 
 ```bash
